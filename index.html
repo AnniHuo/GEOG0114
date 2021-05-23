@@ -302,49 +302,29 @@ $(document).ready(function () {
 
 <div id="TOC">
 <ul>
-<li><a href="#research-on-obesity-prevalence-in-england-gender">Research on Obesity Prevalence in England (gender)</a><ul>
-<li><a href="#load-packages">Load packages</a><ul>
-<li><a href="#load-basic-package">Load basic package</a></li>
-<li><a href="#load-plot-library">load plot library</a></li>
-</ul></li>
-<li><a href="#load-and-clean-.csv-datasets">load and clean .csv datasets</a><ul>
-<li><a href="#load-obesity.csv-file">load obesity.csv file</a></li>
-<li><a href="#load-education-investment.csv">load education investment.csv</a></li>
-<li><a href="#load-weekly-income.csv">load weekly income.csv</a></li>
-<li><a href="#load-crime.csv">load crime.csv</a></li>
-</ul></li>
+<li><a href="#research-on-obesity-prevalence-in-england-gender"><strong>Research on Obesity Prevalence in England (gender)</strong></a><ul>
+<li><a href="#load-packages">Load packages</a></li>
+<li><a href="#load-and-clean-.csv-datasets">load and clean .csv datasets</a></li>
+<li><a href="#plot-temporal-change-of-obesity-in-male-and-female">plot temporal change of obesity in male and female</a></li>
 <li><a href="#save-the-obesity-trend-figure">save the obesity trend figure</a></li>
-<li><a href="#load-and-clean-shapefile-dataset">load and clean shapefile dataset</a><ul>
-<li><a href="#load-shapefile">load shapefile</a></li>
-<li><a href="#only-remain-the-data-for-england">only remain the data for England</a></li>
-</ul></li>
+<li><a href="#load-and-clean-shapefile-dataset">load and clean shapefile dataset</a></li>
 <li><a href="#merge-shapefile-and-.csv-file-of-england">merge shapefile and .csv file of England</a></li>
-<li><a href="#plot-the-obesity-density-distribution-in-england-by-gender">plot the obesity density distribution in England by gender</a><ul>
-<li><a href="#function-for-obesity-density-distribution-mapping">function for obesity density distribution mapping</a></li>
-<li><a href="#function-for-legend-of-obesity-density-distribution-mapping">function for legend of obesity density distribution mapping</a></li>
-<li><a href="#tmap---obese-population-density-by-la-in-england">tmap - obese population density by LA in England</a></li>
-</ul></li>
-<li><a href="#spatial-autocorrelation">spatial autocorrelation</a><ul>
-<li><a href="#global-morans-i-for-obese-male-and-female">Global Moran’s I for obese male and female</a></li>
-<li><a href="#local-morans-i-for-obese-male-and-female">Local Moran’s I for obese male and female</a></li>
-<li><a href="#arrange-the-maps-and-save">arrange the maps and save</a></li>
-</ul></li>
-<li><a href="#correlation-analysis">correlation analysis</a><ul>
-<li><a href="#merge-datasets-used-for-correlation-analysis">merge datasets used for correlation analysis</a></li>
-<li><a href="#correlation-analysis-1">correlation analysis</a></li>
+<li><a href="#plot-the-obesity-density-distribution-in-england-by-gender">plot the obesity density distribution in England by gender</a></li>
+<li><a href="#spatial-autocorrelation">spatial autocorrelation</a></li>
+<li><a href="#correlation-analysis">correlation analysis</a></li>
 <li><a href="#comparison-of-influence-for-males-and-females">comparison of influence for males and females</a></li>
-<li><a href="#statistical-results">statistical results</a></li>
-</ul></li>
 </ul></li>
 </ul>
 </div>
 
-<div id="research-on-obesity-prevalence-in-england-gender" class="section level1">
-<h1>Research on Obesity Prevalence in England (gender)</h1>
-<div id="load-packages" class="section level2">
-<h2>Load packages</h2>
-<div id="load-basic-package" class="section level3">
-<h3>Load basic package</h3>
+<p><span class="math display">\[\\\\[0.2in]\]</span></p>
+<div id="research-on-obesity-prevalence-in-england-gender" class="section level2">
+<h2><strong>Research on Obesity Prevalence in England (gender)</strong></h2>
+<p><span class="math display">\[\\\\[0.1cm]\]</span></p>
+<div id="load-packages" class="section level3">
+<h3>Load packages</h3>
+<div id="load-basic-package" class="section level4">
+<h4>Load basic package</h4>
 <pre class="r"><code>library(sp)
 library(maptools)</code></pre>
 <pre><code>## Checking rgeos availability: TRUE</code></pre>
@@ -448,8 +428,8 @@ library(car)</code></pre>
 ## x plyr::summarise()  masks dplyr::summarise()
 ## x plyr::summarize()  masks dplyr::summarize()</code></pre>
 </div>
-<div id="load-plot-library" class="section level3">
-<h3>load plot library</h3>
+<div id="load-plot-library" class="section level4">
+<h4>load plot library</h4>
 <pre class="r"><code>library(ggplot2)
 library(RColorBrewer)
 library(Rmisc)</code></pre>
@@ -461,10 +441,10 @@ library(Rmisc)</code></pre>
 ##     panel.histogram</code></pre>
 </div>
 </div>
-<div id="load-and-clean-.csv-datasets" class="section level2">
-<h2>load and clean .csv datasets</h2>
-<div id="load-obesity.csv-file" class="section level3">
-<h3>load obesity.csv file</h3>
+<div id="load-and-clean-.csv-datasets" class="section level3">
+<h3>load and clean .csv datasets</h3>
+<div id="load-obesity.csv-file" class="section level4">
+<h4>load obesity.csv file</h4>
 <p>The applied Obesity Dataset is from NHS Digital (2020), called statistics on obesity in England, covering the obesity cases classified by hospitals from 2009 to 2019. The observations have been clearly organized based on gender and local authorities of England. <a href="https://digital.nhs.uk/data-and-information/publications/statistical/statistics-on-obesity-physical-activity-and-diet/england-2020/data-tables" class="uri">https://digital.nhs.uk/data-and-information/publications/statistical/statistics-on-obesity-physical-activity-and-diet/england-2020/data-tables</a></p>
 <pre class="r"><code>obesity_gender &lt;- read_csv(&quot;datasets/obesity_gender_england.csv&quot;)</code></pre>
 <pre><code>## Warning: Missing column names filled in: &#39;X2&#39; [2]</code></pre>
@@ -529,8 +509,8 @@ obesity &lt;- read_csv(&quot;datasets/obesity_england.csv&quot;)</code></pre>
 ##  NA&#39;s   :10</code></pre>
 <p>Other sociodemographic datasets have also been sourced from Office of National Statistics, including crime and justice dataset (Office of National Statistics, 2019), gross disposable household income dataset (Office of National Statistics, 2018), and school expenditure dataset (GOV.UK, 2019).</p>
 </div>
-<div id="load-education-investment.csv" class="section level3">
-<h3>load education investment.csv</h3>
+<div id="load-education-investment.csv" class="section level4">
+<h4>load education investment.csv</h4>
 <p>School expenditure dataset: How schools and local authorities spent their funding on education, children’s services and social care in the financial year 2018 to 2019. <a href="https://www.gov.uk/government/statistics/la-and-school-expenditure-2018-to-2019-financial-year" class="uri">https://www.gov.uk/government/statistics/la-and-school-expenditure-2018-to-2019-financial-year</a></p>
 <pre class="r"><code>eduinves &lt;- read_csv(&quot;datasets/education_investment.csv&quot;) %&gt;% 
   select(., c(1, 7)) %&gt;% 
@@ -548,8 +528,8 @@ obesity &lt;- read_csv(&quot;datasets/obesity_england.csv&quot;)</code></pre>
 ##   `Spend per Capita (£)` = col_number()
 ## )</code></pre>
 </div>
-<div id="load-weekly-income.csv" class="section level3">
-<h3>load weekly income.csv</h3>
+<div id="load-weekly-income.csv" class="section level4">
+<h4>load weekly income.csv</h4>
 <p>Gross disposable household income (GDHI): allocated to UK local authorities including property income, social benefits and primary and secondary income. <a href="https://www.ons.gov.uk/economy/regionalaccounts/grossdisposablehouseholdincome/datasets/regionalgrossdisposablehouseholdincomegdhibylocalauthorityintheuk" class="uri">https://www.ons.gov.uk/economy/regionalaccounts/grossdisposablehouseholdincome/datasets/regionalgrossdisposablehouseholdincomegdhibylocalauthorityintheuk</a></p>
 <p>Here, the research only use the weekly income speedsheet for men and women.</p>
 <pre class="r"><code>income_male &lt;- read_csv(&quot;datasets/income_male.csv&quot;) %&gt;% 
@@ -617,8 +597,8 @@ obesity &lt;- read_csv(&quot;datasets/obesity_england.csv&quot;)</code></pre>
 ##                     3rd Qu.:495.4  
 ##                     Max.   :941.9</code></pre>
 </div>
-<div id="load-crime.csv" class="section level3">
-<h3>load crime.csv</h3>
+<div id="load-crime.csv" class="section level4">
+<h4>load crime.csv</h4>
 <p>Crime and justice dataset: Recorded crime figures for Community Safety Partnerships which equates in the majority of instances to local authorities . The data are rolling 12 month totals, with data points shown at the end of each financial year between year ending March 2003 and year ending March 2007 and at the end of each quarter from June 2007. The data cover local authority boundaries from April 2009 onwards and local authority area names correspond to Community Safety Partnership areas. <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/datasets/recordedcrimedataatcommunitysafetypartnershiplocalauthoritylevel" class="uri">https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/datasets/recordedcrimedataatcommunitysafetypartnershiplocalauthoritylevel</a></p>
 <p>Translation of area code of Community Safety Partnerships to GSS_CODE <a href="https://geoportal.statistics.gov.uk/datasets/local-authority-district-to-community-safety-partnerships-to-police-force-areas-january-2017-lookup-in-england-and-wales-version-2/data" class="uri">https://geoportal.statistics.gov.uk/datasets/local-authority-district-to-community-safety-partnerships-to-police-force-areas-january-2017-lookup-in-england-and-wales-version-2/data</a></p>
 <pre class="r"><code># code translation
@@ -684,7 +664,10 @@ crime &lt;- crime %&gt;%
   select(.,c(1, 23)) %&gt;% 
   left_join(., code,
             by = c(&quot;ons_code&quot; = &quot;csp17cd&quot;))</code></pre>
-<p>##plot temporal change of obesity in male and female</p>
+</div>
+</div>
+<div id="plot-temporal-change-of-obesity-in-male-and-female" class="section level3">
+<h3>plot temporal change of obesity in male and female</h3>
 <pre class="r"><code>obesity_gender &lt;- obesity_gender %&gt;% 
   select(., c(4, 5, 6)) %&gt;% 
   pivot_longer(.,cols = 1:2,
@@ -704,15 +687,14 @@ crime &lt;- crime %&gt;%
   theme_classic() </code></pre>
 <p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /> The dataset witnesses the increasing trends of obesity prevalence in England for males and female, and the growing gap between them.</p>
 </div>
-</div>
-<div id="save-the-obesity-trend-figure" class="section level2">
-<h2>save the obesity trend figure</h2>
+<div id="save-the-obesity-trend-figure" class="section level3">
+<h3>save the obesity trend figure</h3>
 <pre class="r"><code>ggsave(&quot;pic/obesity trend by gender.jpg&quot;, width = 7, height = 4)</code></pre>
 </div>
-<div id="load-and-clean-shapefile-dataset" class="section level2">
-<h2>load and clean shapefile dataset</h2>
-<div id="load-shapefile" class="section level3">
-<h3>load shapefile</h3>
+<div id="load-and-clean-shapefile-dataset" class="section level3">
+<h3>load and clean shapefile dataset</h3>
+<div id="load-shapefile" class="section level4">
+<h4>load shapefile</h4>
 <pre class="r"><code>la &lt;- st_read(&quot;datasets/gadm36_GBR_shp/gadm36_GBR_2.shp&quot;) %&gt;% 
   st_transform(., 27700) %&gt;% 
   clean_names()</code></pre>
@@ -723,16 +705,16 @@ crime &lt;- crime %&gt;%
 ## bbox:           xmin: -13.69139 ymin: 49.86542 xmax: 1.764168 ymax: 61.52708
 ## geographic CRS: WGS 84</code></pre>
 </div>
-<div id="only-remain-the-data-for-england" class="section level3">
-<h3>only remain the data for England</h3>
+<div id="only-remain-the-data-for-england" class="section level4">
+<h4>only remain the data for England</h4>
 <pre class="r"><code>unique(la$name_1)</code></pre>
 <pre><code>## [1] &quot;England&quot;          &quot;Northern Ireland&quot; &quot;Scotland&quot;         &quot;Wales&quot;</code></pre>
 <pre class="r"><code>england_la &lt;- la[la$name_1==&quot;England&quot;,]%&gt;% 
   select(., c(6, 7, 14)) </code></pre>
 </div>
 </div>
-<div id="merge-shapefile-and-.csv-file-of-england" class="section level2">
-<h2>merge shapefile and .csv file of England</h2>
+<div id="merge-shapefile-and-.csv-file-of-england" class="section level3">
+<h3>merge shapefile and .csv file of England</h3>
 <pre class="r"><code>england_obesity &lt;- england_la %&gt;% 
   left_join(., obesity,
             by=c(&quot;name_2&quot;=&quot;X3&quot;)) %&gt;% 
@@ -755,11 +737,11 @@ tm_shape(england_obesity) +
               midpoint=NA)</code></pre>
 <p><img src="index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 </div>
-<div id="plot-the-obesity-density-distribution-in-england-by-gender" class="section level2">
-<h2>plot the obesity density distribution in England by gender</h2>
+<div id="plot-the-obesity-density-distribution-in-england-by-gender" class="section level3">
+<h3>plot the obesity density distribution in England by gender</h3>
 <p>To avoid the influence of sparsely populated rural areas, the statistics of obesity density is calculated by dividing obese cases by population.</p>
-<div id="function-for-obesity-density-distribution-mapping" class="section level3">
-<h3>function for obesity density distribution mapping</h3>
+<div id="function-for-obesity-density-distribution-mapping" class="section level4">
+<h4>function for obesity density distribution mapping</h4>
 <pre class="r"><code>densityfun &lt;- function(datasets, colname, number, mode){
   tmap_mode(mode)
   breaks = c(-Inf, 500, 1000, 1500, 2000, 2500, 3000, 3500, +Inf) 
@@ -775,8 +757,8 @@ tm_shape(england_obesity) +
   return(tm)
 }</code></pre>
 </div>
-<div id="function-for-legend-of-obesity-density-distribution-mapping" class="section level3">
-<h3>function for legend of obesity density distribution mapping</h3>
+<div id="function-for-legend-of-obesity-density-distribution-mapping" class="section level4">
+<h4>function for legend of obesity density distribution mapping</h4>
 <pre class="r"><code>legendfun &lt;- function(datasets, colname){
   breaks = c(-Inf, 500, 1000, 1500, 2000, 2500, 3000, 3500, +Inf) 
   legend &lt;- tm_shape(datasets) +
@@ -796,8 +778,8 @@ tm_shape(england_obesity) +
   return(legend)
 }</code></pre>
 </div>
-<div id="tmap---obese-population-density-by-la-in-england" class="section level3">
-<h3>tmap - obese population density by LA in England</h3>
+<div id="tmap---obese-population-density-by-la-in-england" class="section level4">
+<h4>tmap - obese population density by LA in England</h4>
 <pre class="r"><code>tm1 &lt;- densityfun(england_obesity, &quot;male_per_100_000_of_population&quot;,&quot;a)&quot;, &quot;plot&quot;)</code></pre>
 <pre><code>## tmap mode set to plotting</code></pre>
 <pre class="r"><code>tm2 &lt;- densityfun(england_obesity, &quot;female_per_100_000_of_population&quot;,&quot;b)&quot;, &quot;plot&quot;)</code></pre>
@@ -807,17 +789,17 @@ tm_shape(england_obesity) +
 
 t_density &lt;- tmap_arrange(tm1, tm2, legend, ncol=3)
 t_density</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-23-1.png" width="672" /> ### save obese population density mapping</p>
+<p><img src="index_files/figure-html/unnamed-chunk-23-1.png" width="672" /> ####save obese population density mapping</p>
 <pre class="r"><code>tmap_save(t_density, &#39;pic/obese population density.png&#39;, width=7, height=3)</code></pre>
 <pre><code>## Map saved to /Users/huoanni/OneDrive - University College London/Module assessment/GEOG0114_CW1/assessment0114/pic/obese population density.png</code></pre>
 <pre><code>## Resolution: 2100 by 900 pixels</code></pre>
 <pre><code>## Size: 7 by 3 inches (300 dpi)</code></pre>
 </div>
 </div>
-<div id="spatial-autocorrelation" class="section level2">
-<h2>spatial autocorrelation</h2>
-<div id="global-morans-i-for-obese-male-and-female" class="section level3">
-<h3>Global Moran’s I for obese male and female</h3>
+<div id="spatial-autocorrelation" class="section level3">
+<h3>spatial autocorrelation</h3>
+<div id="global-morans-i-for-obese-male-and-female" class="section level4">
+<h4>Global Moran’s I for obese male and female</h4>
 <p>Global Moran’s I statistics, as a global spatial autocorrelation measurement for spatial terms, is used to examine whether obesity phenomena were dispersed, random or clustered.</p>
 <pre class="r"><code># check the current class
 class(england_obesity)</code></pre>
@@ -858,7 +840,7 @@ mc_model1</code></pre>
 ## weights: nb_weights_list  
 ## number of simulations + 1: 1000 
 ## 
-## statistic = 0.11415, observed rank = 975, p-value = 0.025
+## statistic = 0.11415, observed rank = 982, p-value = 0.018
 ## alternative hypothesis: greater</code></pre>
 <pre class="r"><code>moran(england_obesity$female_per_100_000_of_population, 
       nb_weights_list, 
@@ -882,8 +864,8 @@ mc_model2</code></pre>
 ## statistic = 0.21819, observed rank = 1000, p-value = 0.001
 ## alternative hypothesis: greater</code></pre>
 </div>
-<div id="local-morans-i-for-obese-male-and-female" class="section level3">
-<h3>Local Moran’s I for obese male and female</h3>
+<div id="local-morans-i-for-obese-male-and-female" class="section level4">
+<h4>Local Moran’s I for obese male and female</h4>
 <p>Then, use the Local Moran’s I for obese male and female groups to identify specific spatial pattern for obesity at local authority level.</p>
 <pre class="r"><code># rescale that variable!
 england_obesity_sp$scale_male_per_100_000_of_population &lt;- scale(england_obesity_sp$male_per_100_000_of_population)
@@ -1003,8 +985,8 @@ ggplot(england_obesity_moran_stats,
             legend.only = TRUE, 
             legend.position=c(0.1,0.25),asp=0.1)</code></pre>
 </div>
-<div id="arrange-the-maps-and-save" class="section level3">
-<h3>arrange the maps and save</h3>
+<div id="arrange-the-maps-and-save" class="section level4">
+<h4>arrange the maps and save</h4>
 <pre class="r"><code>tmap_mode(&quot;plot&quot;)</code></pre>
 <pre><code>## tmap mode set to plotting</code></pre>
 <pre class="r"><code>local_moran &lt;- tmap_arrange(t1, t2, legend, ncol=3)
@@ -1016,10 +998,10 @@ local_moran</code></pre>
 <pre><code>## Size: 7 by 4 inches (300 dpi)</code></pre>
 </div>
 </div>
-<div id="correlation-analysis" class="section level2">
-<h2>correlation analysis</h2>
-<div id="merge-datasets-used-for-correlation-analysis" class="section level3">
-<h3>merge datasets used for correlation analysis</h3>
+<div id="correlation-analysis" class="section level3">
+<h3>correlation analysis</h3>
+<div id="merge-datasets-used-for-correlation-analysis" class="section level4">
+<h4>merge datasets used for correlation analysis</h4>
 <pre class="r"><code>obesityfactor &lt;- england_obesity %&gt;% 
   left_join(., eduinves,
             by = c(&quot;region_and_la_of_residence&quot; = &quot;la_code&quot;)) %&gt;% 
@@ -1040,8 +1022,8 @@ local_moran</code></pre>
                                  !is.na(obesityfactor$crime)&amp;
                                  !is.na(obesityfactor$crime),]</code></pre>
 </div>
-<div id="correlation-analysis-1" class="section level3">
-<h3>correlation analysis</h3>
+<div id="correlation-analysis-1" class="section level4">
+<h4>correlation analysis</h4>
 <pre class="r"><code>colnames(obesityfactor)</code></pre>
 <pre><code>## [1] &quot;code&quot;             &quot;male_obesity&quot;     &quot;female_obesity&quot;   &quot;education_invest&quot;
 ## [5] &quot;male_income&quot;      &quot;female_income&quot;    &quot;crime&quot;            &quot;geometry&quot;</code></pre>
@@ -1077,6 +1059,7 @@ qcm &lt;- q5 + stat_smooth(method=&quot;lm&quot;, se=FALSE, size=1) </code></pre
            xlim = c(0, 50000))
 qcf &lt;- q6 + stat_smooth(method=&quot;lm&quot;, se=FALSE, size=1) </code></pre>
 </div>
+</div>
 <div id="comparison-of-influence-for-males-and-females" class="section level3">
 <h3>comparison of influence for males and females</h3>
 <pre class="r"><code>multiplot(qem, qef, cols = 2)</code></pre>
@@ -1104,9 +1087,8 @@ qcf &lt;- q6 + stat_smooth(method=&quot;lm&quot;, se=FALSE, size=1) </code></pre
 
 ## Warning: Removed 7 rows containing missing values (geom_point).</code></pre>
 <p><img src="index_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
-</div>
-<div id="statistical-results" class="section level3">
-<h3>statistical results</h3>
+<div id="statistical-results" class="section level4">
+<h4>statistical results</h4>
 <pre class="r"><code>type &lt;- obesityfactor %&gt;% 
   st_drop_geometry() %&gt;% 
   summarise_all(class) %&gt;% 

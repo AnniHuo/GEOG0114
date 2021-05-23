@@ -9,13 +9,15 @@ output:
 
 ---
 
-# Research on Obesity Prevalence in England (gender)
+$$\\\\[0.2in]$$
+
+## **Research on Obesity Prevalence in England (gender)**
+$$\\\\[0.1cm]$$
+
+### Load packages
 
 
-## Load packages
-
-
-### Load basic package
+#### Load basic package
 
 ```{r}
 library(sp)
@@ -34,7 +36,7 @@ library(car)
 library(tidymodels)
 ```
 
-### load plot library
+#### load plot library
 
 ```{r}
 library(ggplot2)
@@ -45,9 +47,9 @@ library(Rmisc)
 
 
 
-## load and clean .csv datasets
+### load and clean .csv datasets
 
-### load obesity.csv file
+#### load obesity.csv file
 
 The applied Obesity Dataset is from NHS Digital (2020), called statistics on obesity in England, covering the obesity cases classified by hospitals from 2009 to 2019. The observations have been clearly organized based on gender and local authorities of England.
 https://digital.nhs.uk/data-and-information/publications/statistical/statistics-on-obesity-physical-activity-and-diet/england-2020/data-tables 
@@ -61,7 +63,7 @@ summary(obesity)
 
 Other sociodemographic datasets have also been sourced from Office of National Statistics, including crime and justice dataset (Office of National Statistics, 2019), gross disposable household income dataset (Office of National Statistics, 2018), and school expenditure dataset (GOV.UK, 2019). 
 
-### load education investment.csv
+#### load education investment.csv
 
 School expenditure dataset: How schools and local authorities spent their funding on education, children's services and social care in the financial year 2018 to 2019.
 https://www.gov.uk/government/statistics/la-and-school-expenditure-2018-to-2019-financial-year 
@@ -73,7 +75,7 @@ eduinves <- read_csv("datasets/education_investment.csv") %>%
 ```
 
 
-### load weekly income.csv
+#### load weekly income.csv
 
 Gross disposable household income (GDHI): allocated to UK local authorities including property income, social benefits and primary and secondary income.
 https://www.ons.gov.uk/economy/regionalaccounts/grossdisposablehouseholdincome/datasets/regionalgrossdisposablehouseholdincomegdhibylocalauthorityintheuk 
@@ -94,7 +96,7 @@ summary(income_female)
 ```
 
 
-### load crime.csv
+#### load crime.csv
 
 Crime and justice dataset: Recorded crime figures for Community Safety Partnerships which equates in the majority of instances to local authorities . The data are rolling 12 month totals, with data points shown at the end of each financial year between year ending March 2003 and year ending March 2007 and at the end of each quarter from June 2007. The data cover local authority boundaries from April 2009 onwards and local authority area names correspond to Community Safety Partnership areas.
 https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/datasets/recordedcrimedataatcommunitysafetypartnershiplocalauthoritylevel 
@@ -143,7 +145,7 @@ crime <- crime %>%
 ```
 
 
-##plot temporal change of obesity in male and female
+### plot temporal change of obesity in male and female
 
 ```{r}
 obesity_gender <- obesity_gender %>% 
@@ -169,15 +171,15 @@ ggplot(data = obesity_gender, mapping = aes(x = year, y = count, group = gender)
 ```
 The dataset witnesses the increasing trends of obesity prevalence in England for males and female, and the growing gap between them.
 
-## save the obesity trend figure
+### save the obesity trend figure
 
 ```{r}
 ggsave("pic/obesity trend by gender.jpg", width = 7, height = 4)
 ```
 
-## load and clean shapefile dataset
+### load and clean shapefile dataset
 
-### load shapefile
+#### load shapefile
 
 ```{r}
 la <- st_read("datasets/gadm36_GBR_shp/gadm36_GBR_2.shp") %>% 
@@ -185,7 +187,7 @@ la <- st_read("datasets/gadm36_GBR_shp/gadm36_GBR_2.shp") %>%
   clean_names()
 ```
 
-### only remain the data for England
+#### only remain the data for England
 
 ```{r}
 unique(la$name_1)
@@ -195,7 +197,7 @@ england_la <- la[la$name_1=="England",]%>%
   select(., c(6, 7, 14)) 
 ```
 
-## merge shapefile and .csv file of England
+### merge shapefile and .csv file of England
 
 ```{r}
 england_obesity <- england_la %>% 
@@ -216,11 +218,11 @@ tm_shape(england_obesity) +
               midpoint=NA)
 ```
 
-## plot the obesity density distribution in England by gender
+### plot the obesity density distribution in England by gender
 
 To avoid the influence of sparsely populated rural areas, the statistics of obesity density is calculated by dividing obese cases by population. 
 
-### function for obesity density distribution mapping
+#### function for obesity density distribution mapping
 
 ```{r}
 densityfun <- function(datasets, colname, number, mode){
@@ -240,7 +242,7 @@ densityfun <- function(datasets, colname, number, mode){
 
 ```
 
-### function for legend of obesity density distribution mapping
+#### function for legend of obesity density distribution mapping
 
 ```{r}
 legendfun <- function(datasets, colname){
@@ -263,7 +265,7 @@ legendfun <- function(datasets, colname){
 }
 ```
 
-### tmap - obese population density by LA in England
+#### tmap - obese population density by LA in England
 
 ```{r}
 tm1 <- densityfun(england_obesity, "male_per_100_000_of_population","a)", "plot")
@@ -278,7 +280,7 @@ legend <- legendfun(england_obesity,"male_per_100_000_of_population")
 t_density <- tmap_arrange(tm1, tm2, legend, ncol=3)
 t_density
 ```
-### save obese population density mapping
+####save obese population density mapping
 
 ```{r}
 tmap_save(t_density, 'pic/obese population density.png', width=7, height=3)
@@ -286,9 +288,9 @@ tmap_save(t_density, 'pic/obese population density.png', width=7, height=3)
 
 
 
-## spatial autocorrelation
+### spatial autocorrelation
 
-### Global Moran's I for obese male and female
+#### Global Moran's I for obese male and female
 
 Global Moran's I statistics, as a global spatial autocorrelation measurement for spatial terms, is used to examine whether obesity phenomena were dispersed, random or clustered.
 
@@ -335,7 +337,7 @@ mc_model2 <- moran.mc(england_obesity_sp$female_per_100_000_of_population, nb_we
 mc_model2
 ```
 
-### Local Moran's I for obese male and female
+#### Local Moran's I for obese male and female
 
 Then, use the Local Moran’s I for obese male and female groups to identify specific spatial pattern for obesity at local authority level. 
 
@@ -469,7 +471,7 @@ legend <- tm_shape(england_obesity_moran_stats) +
             legend.position=c(0.1,0.25),asp=0.1)
 ```
 
-### arrange the maps and save
+#### arrange the maps and save
 
 ```{r}
 tmap_mode("plot")
@@ -481,9 +483,9 @@ tmap_save(local_moran, "pic/Local Moran's I, Obesity in England.png",width=7, he
 ```
 
 
-## correlation analysis
+### correlation analysis
 
-### merge datasets used for correlation analysis
+#### merge datasets used for correlation analysis
 
 ```{r}
 obesityfactor <- england_obesity %>% 
@@ -513,7 +515,7 @@ obesityfactor <- obesityfactor[!is.na(obesityfactor$male_obesity)&
                                  !is.na(obesityfactor$crime),]
 ```
 
-### correlation analysis
+#### correlation analysis
 
 ```{r}
 colnames(obesityfactor)
@@ -581,7 +583,7 @@ multiplot(qcm, qcf, cols = 2)
 ```
 
 
-### statistical results
+#### statistical results
 
 ```{r}
 type <- obesityfactor %>% 
