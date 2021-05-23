@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>index.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">analysis site</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">114 CW1 analysis</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#research-on-obesity-prevalence-in-england-gender">Research on Obesity Prevalence in England (gender)</a><ul>
+<li><a href="#load-packages">Load packages</a><ul>
+<li><a href="#load-basic-package">Load basic package</a></li>
+<li><a href="#load-plot-library">load plot library</a></li>
+</ul></li>
+<li><a href="#load-and-clean-.csv-datasets">load and clean .csv datasets</a><ul>
+<li><a href="#load-obesity.csv-file">load obesity.csv file</a></li>
+<li><a href="#load-education-investment.csv">load education investment.csv</a></li>
+<li><a href="#load-weekly-income.csv">load weekly income.csv</a></li>
+<li><a href="#load-crime.csv">load crime.csv</a></li>
+</ul></li>
+<li><a href="#save-the-obesity-trend-figure">save the obesity trend figure</a></li>
+<li><a href="#load-and-clean-shapefile-dataset">load and clean shapefile dataset</a><ul>
+<li><a href="#load-shapefile">load shapefile</a></li>
+<li><a href="#only-remain-the-data-for-england">only remain the data for England</a></li>
+</ul></li>
+<li><a href="#merge-shapefile-and-.csv-file-of-england">merge shapefile and .csv file of England</a></li>
+<li><a href="#plot-the-obesity-density-distribution-in-england-by-gender">plot the obesity density distribution in England by gender</a><ul>
+<li><a href="#function-for-obesity-density-distribution-mapping">function for obesity density distribution mapping</a></li>
+<li><a href="#function-for-legend-of-obesity-density-distribution-mapping">function for legend of obesity density distribution mapping</a></li>
+<li><a href="#tmap---obese-population-density-by-la-in-england">tmap - obese population density by LA in England</a></li>
+</ul></li>
+<li><a href="#spatial-autocorrelation">spatial autocorrelation</a><ul>
+<li><a href="#global-morans-i-for-obese-male-and-female">Global Moran’s I for obese male and female</a></li>
+<li><a href="#local-morans-i-for-obese-male-and-female">Local Moran’s I for obese male and female</a></li>
+<li><a href="#arrange-the-maps-and-save">arrange the maps and save</a></li>
+</ul></li>
+<li><a href="#correlation-analysis">correlation analysis</a><ul>
+<li><a href="#merge-datasets-used-for-correlation-analysis">merge datasets used for correlation analysis</a></li>
+<li><a href="#correlation-analysis-1">correlation analysis</a></li>
+<li><a href="#comparison-of-influence-for-males-and-females">comparison of influence for males and females</a></li>
+<li><a href="#statistical-results">statistical results</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="research-on-obesity-prevalence-in-england-gender" class="section level1">
+<h1>Research on Obesity Prevalence in England (gender)</h1>
+<div id="load-packages" class="section level2">
+<h2>Load packages</h2>
+<div id="load-basic-package" class="section level3">
+<h3>Load basic package</h3>
+<pre class="r"><code>library(sp)
+library(maptools)</code></pre>
+<pre><code>## Checking rgeos availability: TRUE</code></pre>
+<pre class="r"><code>library(tmap)
+library(sf)</code></pre>
+<pre><code>## Linking to GEOS 3.8.1, GDAL 3.2.0, PROJ 7.2.0</code></pre>
+<pre class="r"><code>library(tmaptools)
+library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+## ✓ readr   1.4.0     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(janitor)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;janitor&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     chisq.test, fisher.test</code></pre>
+<pre class="r"><code>library(spdep)</code></pre>
+<pre><code>## Loading required package: spData</code></pre>
+<pre><code>## To access larger datasets in this package, install the spDataLarge
+## package with: `install.packages(&#39;spDataLarge&#39;,
+## repos=&#39;https://nowosad.github.io/drat/&#39;, type=&#39;source&#39;)`</code></pre>
+<pre class="r"><code>library(spatstat)</code></pre>
+<pre><code>## Loading required package: spatstat.data</code></pre>
+<pre><code>## Loading required package: nlme</code></pre>
+<pre><code>## 
+## Attaching package: &#39;nlme&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     collapse</code></pre>
+<pre><code>## Loading required package: rpart</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;spatstat&#39;:
+##   method     from
+##   print.boxx cli</code></pre>
+<pre><code>## 
+## spatstat 1.64-1       (nickname: &#39;Help you I can, yes!&#39;) 
+## For an introduction to spatstat, type &#39;beginner&#39;</code></pre>
+<pre><code>## 
+## Note: spatstat version 1.64-1 is out of date by more than a year; we strongly recommend upgrading to the latest version.</code></pre>
+<pre class="r"><code>library(plyr)</code></pre>
+<pre><code>## ------------------------------------------------------------------------------</code></pre>
+<pre><code>## You have loaded plyr after dplyr - this is likely to cause problems.
+## If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+## library(plyr); library(dplyr)</code></pre>
+<pre><code>## ------------------------------------------------------------------------------</code></pre>
+<pre><code>## 
+## Attaching package: &#39;plyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     arrange, count, desc, failwith, id, mutate, rename, summarise,
+##     summarize</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     compact</code></pre>
+<pre class="r"><code>library(stats)
+library(corrr)
+library(car)</code></pre>
+<pre><code>## Loading required package: carData</code></pre>
+<pre><code>## 
+## Attaching package: &#39;car&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:spatstat&#39;:
+## 
+##     bc, ellipse</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     recode</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     some</code></pre>
+<pre class="r"><code>library(tidymodels)</code></pre>
+<pre><code>## ── Attaching packages ────────────────────────────────────── tidymodels 0.1.2 ──</code></pre>
+<pre><code>## ✓ broom     0.7.2      ✓ recipes   0.1.15
+## ✓ dials     0.0.9      ✓ rsample   0.0.8 
+## ✓ infer     0.5.3      ✓ tune      0.1.2 
+## ✓ modeldata 0.1.0      ✓ workflows 0.2.1 
+## ✓ parsnip   0.1.4      ✓ yardstick 0.0.7</code></pre>
+<pre><code>## ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
+## x plyr::arrange()    masks dplyr::arrange()
+## x nlme::collapse()   masks dplyr::collapse()
+## x plyr::compact()    masks purrr::compact()
+## x plyr::count()      masks dplyr::count()
+## x scales::discard()  masks purrr::discard()
+## x plyr::failwith()   masks dplyr::failwith()
+## x dplyr::filter()    masks stats::filter()
+## x recipes::fixed()   masks stringr::fixed()
+## x plyr::id()         masks dplyr::id()
+## x dplyr::lag()       masks stats::lag()
+## x plyr::mutate()     masks dplyr::mutate()
+## x tune::parameters() masks dials::parameters(), spatstat::parameters()
+## x dials::prune()     masks rpart::prune()
+## x car::recode()      masks dplyr::recode()
+## x plyr::rename()     masks dplyr::rename()
+## x car::some()        masks purrr::some()
+## x yardstick::spec()  masks readr::spec()
+## x recipes::step()    masks stats::step()
+## x plyr::summarise()  masks dplyr::summarise()
+## x plyr::summarize()  masks dplyr::summarize()</code></pre>
+</div>
+<div id="load-plot-library" class="section level3">
+<h3>load plot library</h3>
+<pre class="r"><code>library(ggplot2)
+library(RColorBrewer)
+library(Rmisc)</code></pre>
+<pre><code>## Loading required package: lattice</code></pre>
+<pre><code>## 
+## Attaching package: &#39;lattice&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:spatstat&#39;:
+## 
+##     panel.histogram</code></pre>
+</div>
+</div>
+<div id="load-and-clean-.csv-datasets" class="section level2">
+<h2>load and clean .csv datasets</h2>
+<div id="load-obesity.csv-file" class="section level3">
+<h3>load obesity.csv file</h3>
+<p>The applied Obesity Dataset is from NHS Digital (2020), called statistics on obesity in England, covering the obesity cases classified by hospitals from 2009 to 2019. The observations have been clearly organized based on gender and local authorities of England. <a href="https://digital.nhs.uk/data-and-information/publications/statistical/statistics-on-obesity-physical-activity-and-diet/england-2020/data-tables" class="uri">https://digital.nhs.uk/data-and-information/publications/statistical/statistics-on-obesity-physical-activity-and-diet/england-2020/data-tables</a></p>
+<pre class="r"><code>obesity_gender &lt;- read_csv(&quot;datasets/obesity_gender_england.csv&quot;)</code></pre>
+<pre><code>## Warning: Missing column names filled in: &#39;X2&#39; [2]</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   Year = col_character(),
+##   X2 = col_logical(),
+##   `All persons` = col_number(),
+##   Male = col_number(),
+##   Female = col_number()
+## )</code></pre>
+<pre class="r"><code>obesity_gender$year = c(2009:2019)
+obesity &lt;- read_csv(&quot;datasets/obesity_england.csv&quot;)</code></pre>
+<pre><code>## Warning: Missing column names filled in: &#39;X2&#39; [2], &#39;X3&#39; [3], &#39;X7&#39; [7]</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   `Region and LA of residence` = col_character(),
+##   X2 = col_logical(),
+##   X3 = col_character(),
+##   `All persons` = col_number(),
+##   Male = col_number(),
+##   Female = col_number(),
+##   X7 = col_logical(),
+##   `All persons per 100,000 of population` = col_number(),
+##   `Male per 100,000 of population` = col_number(),
+##   `Female per 100,000 of population` = col_number()
+## )</code></pre>
+<pre class="r"><code>summary(obesity)</code></pre>
+<pre><code>##  Region and LA of residence    X2               X3             All persons    
+##  Length:172                 Mode:logical   Length:172         Min.   :    45  
+##  Class :character           NA&#39;s:172       Class :character   1st Qu.:  2660  
+##  Mode  :character                          Mode  :character   Median :  4270  
+##                                                               Mean   : 16213  
+##                                                               3rd Qu.:  7964  
+##                                                               Max.   :875663  
+##                                                               NA&#39;s   :10      
+##       Male              Female          X7         
+##  Min.   :    20.0   Min.   :    25   Mode:logical  
+##  1st Qu.:   952.5   1st Qu.:  1681   NA&#39;s:172      
+##  Median :  1420.0   Median :  2822                 
+##  Mean   :  5647.7   Mean   : 10565                 
+##  3rd Qu.:  2721.2   3rd Qu.:  5468                 
+##  Max.   :305073.0   Max.   :570568                 
+##  NA&#39;s   :10         NA&#39;s   :10                     
+##  All persons per 100,000 of population Male per 100,000 of population
+##  Min.   : 413                          Min.   : 328.0                
+##  1st Qu.:1180                          1st Qu.: 888.8                
+##  Median :1512                          Median :1076.5                
+##  Mean   :1641                          Mean   :1205.8                
+##  3rd Qu.:2079                          3rd Qu.:1439.2                
+##  Max.   :3804                          Max.   :2884.0                
+##  NA&#39;s   :10                            NA&#39;s   :10                    
+##  Female per 100,000 of population
+##  Min.   : 497                    
+##  1st Qu.:1450                    
+##  Median :1928                    
+##  Mean   :2081                    
+##  3rd Qu.:2598                    
+##  Max.   :4872                    
+##  NA&#39;s   :10</code></pre>
+<p>Other sociodemographic datasets have also been sourced from Office of National Statistics, including crime and justice dataset (Office of National Statistics, 2019), gross disposable household income dataset (Office of National Statistics, 2018), and school expenditure dataset (GOV.UK, 2019).</p>
+</div>
+<div id="load-education-investment.csv" class="section level3">
+<h3>load education investment.csv</h3>
+<p>School expenditure dataset: How schools and local authorities spent their funding on education, children’s services and social care in the financial year 2018 to 2019. <a href="https://www.gov.uk/government/statistics/la-and-school-expenditure-2018-to-2019-financial-year" class="uri">https://www.gov.uk/government/statistics/la-and-school-expenditure-2018-to-2019-financial-year</a></p>
+<pre class="r"><code>eduinves &lt;- read_csv(&quot;datasets/education_investment.csv&quot;) %&gt;% 
+  select(., c(1, 7)) %&gt;% 
+  clean_names()</code></pre>
+<pre><code>## Warning: Missing column names filled in: &#39;X2&#39; [2], &#39;X3&#39; [3], &#39;X4&#39; [4]</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   `LA Code` = col_character(),
+##   X2 = col_double(),
+##   X3 = col_character(),
+##   X4 = col_logical(),
+##   `Children&#39;s and young people&#39;s services £000s` = col_number(),
+##   `Pupil / Population Count` = col_number(),
+##   `Spend per Capita (£)` = col_number()
+## )</code></pre>
+</div>
+<div id="load-weekly-income.csv" class="section level3">
+<h3>load weekly income.csv</h3>
+<p>Gross disposable household income (GDHI): allocated to UK local authorities including property income, social benefits and primary and secondary income. <a href="https://www.ons.gov.uk/economy/regionalaccounts/grossdisposablehouseholdincome/datasets/regionalgrossdisposablehouseholdincomegdhibylocalauthorityintheuk" class="uri">https://www.ons.gov.uk/economy/regionalaccounts/grossdisposablehouseholdincome/datasets/regionalgrossdisposablehouseholdincomegdhibylocalauthorityintheuk</a></p>
+<p>Here, the research only use the weekly income speedsheet for men and women.</p>
+<pre class="r"><code>income_male &lt;- read_csv(&quot;datasets/income_male.csv&quot;) %&gt;% 
+  select(., c(2, 6))</code></pre>
+<pre><code>## Warning: Duplicated column names deduplicated: &#39;change&#39; =&gt; &#39;change_1&#39; [7]</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   Description = col_character(),
+##   Code = col_character(),
+##   `(thousand)` = col_character(),
+##   Median = col_character(),
+##   change = col_double(),
+##   Mean = col_number(),
+##   change_1 = col_double(),
+##   `10` = col_character(),
+##   `20` = col_character(),
+##   `25` = col_character(),
+##   `30` = col_character(),
+##   `40` = col_character(),
+##   `60` = col_character(),
+##   `70` = col_character(),
+##   `75` = col_character(),
+##   `80` = col_character(),
+##   `90` = col_character()
+## )</code></pre>
+<pre class="r"><code>income_female &lt;- read_csv(&quot;datasets/income_female.csv&quot;) %&gt;% 
+  select(., c(2, 6))</code></pre>
+<pre><code>## Warning: Duplicated column names deduplicated: &#39;change&#39; =&gt; &#39;change_1&#39; [7]</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   Description = col_character(),
+##   Code = col_character(),
+##   `(thousand)` = col_character(),
+##   Median = col_character(),
+##   change = col_double(),
+##   Mean = col_double(),
+##   change_1 = col_double(),
+##   `10` = col_character(),
+##   `20` = col_character(),
+##   `25` = col_character(),
+##   `30` = col_character(),
+##   `40` = col_character(),
+##   `60` = col_character(),
+##   `70` = col_character(),
+##   `75` = col_character(),
+##   `80` = col_character(),
+##   `90` = col_character()
+## )</code></pre>
+<pre class="r"><code>summary(income_male)</code></pre>
+<pre><code>##      Code                Mean       
+##  Length:418         Min.   : 432.0  
+##  Class :character   1st Qu.: 593.5  
+##  Mode  :character   Median : 649.5  
+##                     Mean   : 675.2  
+##                     3rd Qu.: 729.3  
+##                     Max.   :1523.8</code></pre>
+<pre class="r"><code>summary(income_female)</code></pre>
+<pre><code>##      Code                Mean      
+##  Length:418         Min.   :314.6  
+##  Class :character   1st Qu.:413.3  
+##  Mode  :character   Median :446.9  
+##                     Mean   :462.5  
+##                     3rd Qu.:495.4  
+##                     Max.   :941.9</code></pre>
+</div>
+<div id="load-crime.csv" class="section level3">
+<h3>load crime.csv</h3>
+<p>Crime and justice dataset: Recorded crime figures for Community Safety Partnerships which equates in the majority of instances to local authorities . The data are rolling 12 month totals, with data points shown at the end of each financial year between year ending March 2003 and year ending March 2007 and at the end of each quarter from June 2007. The data cover local authority boundaries from April 2009 onwards and local authority area names correspond to Community Safety Partnership areas. <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/datasets/recordedcrimedataatcommunitysafetypartnershiplocalauthoritylevel" class="uri">https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/datasets/recordedcrimedataatcommunitysafetypartnershiplocalauthoritylevel</a></p>
+<p>Translation of area code of Community Safety Partnerships to GSS_CODE <a href="https://geoportal.statistics.gov.uk/datasets/local-authority-district-to-community-safety-partnerships-to-police-force-areas-january-2017-lookup-in-england-and-wales-version-2/data" class="uri">https://geoportal.statistics.gov.uk/datasets/local-authority-district-to-community-safety-partnerships-to-police-force-areas-january-2017-lookup-in-england-and-wales-version-2/data</a></p>
+<pre class="r"><code># code translation
+code &lt;- read_csv(&quot;datasets/code.csv&quot;) %&gt;% 
+  select(., c(1, 3)) %&gt;% 
+  clean_names()</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   LAD17CD = col_character(),
+##   LAD17NM = col_character(),
+##   CSP17CD = col_character(),
+##   CSP17NM = col_character(),
+##   PFA17CD = col_character(),
+##   PFA17NM = col_character(),
+##   FID = col_double()
+## )</code></pre>
+<pre class="r"><code>crime &lt;- read_csv(&quot;datasets/crime.csv&quot;) </code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   `12 months ending` = col_character(),
+##   CSP = col_character(),
+##   `ONS Code` = col_character(),
+##   `Police Force Area` = col_character(),
+##   Region = col_character(),
+##   Offence = col_character(),
+##   `Rolling year total number of offences` = col_double()
+## )</code></pre>
+<pre class="r"><code>crime &lt;- crime %&gt;% 
+  filter(.$`12 months ending`==&quot;31/12/2018&quot;) %&gt;% 
+  select(., c(3, 6, 7)) %&gt;% 
+  clean_names() 
+
+crime &lt;- crime[!is.na(crime$ons_code),]
+crime &lt;- crime %&gt;% 
+  pivot_wider(id_cols = 1,
+              names_from = offence,
+              values_from = rolling_year_total_number_of_offences) </code></pre>
+<pre class="r"><code>type &lt;- crime %&gt;% 
+  summarise_all(class) %&gt;% 
+  pivot_longer(everything(),
+               names_to=&quot;all_variables&quot;,
+               values_to=&quot;variable_class&quot;)
+type</code></pre>
+<pre><code>## # A tibble: 22 x 2
+##    all_variables                                     variable_class
+##    &lt;chr&gt;                                             &lt;chr&gt;         
+##  1 ons_code                                          character     
+##  2 All other theft offences                          numeric       
+##  3 Bicycle theft                                     numeric       
+##  4 Criminal damage and arson                         numeric       
+##  5 Death or serious injury caused by illegal driving numeric       
+##  6 Domestic burglary                                 numeric       
+##  7 Drug offences                                     numeric       
+##  8 Homicide                                          numeric       
+##  9 Miscellaneous crimes against society              numeric       
+## 10 Non-domestic burglary                             numeric       
+## # … with 12 more rows</code></pre>
+<pre class="r"><code>crime[is.na(crime)] &lt;- 0
+crime$sum = rowSums(crime[,2:22])
+crime &lt;- crime %&gt;% 
+  select(.,c(1, 23)) %&gt;% 
+  left_join(., code,
+            by = c(&quot;ons_code&quot; = &quot;csp17cd&quot;))</code></pre>
+<p>##plot temporal change of obesity in male and female</p>
+<pre class="r"><code>obesity_gender &lt;- obesity_gender %&gt;% 
+  select(., c(4, 5, 6)) %&gt;% 
+  pivot_longer(.,cols = 1:2,
+               names_to = &quot;gender&quot;,
+               values_to = &quot;count&quot;) %&gt;% 
+  clean_names()</code></pre>
+<pre class="r"><code>ggplot(data = obesity_gender, mapping = aes(x = year, y = count, group = gender)) +
+  geom_line(aes(color = gender))+
+  geom_point(aes(color = gender))+
+  xlab(&quot;Year&quot;)+
+  ylab(&quot;Number of obesity (*1000)&quot;)+
+  scale_x_continuous(breaks = seq(2009, 2019, by = 1))+
+  scale_y_continuous(labels = function(y) y / 1000)+
+  ggtitle(&quot;Trend of obesity prevalence in England by gender&quot;)+
+  theme(axis.title = element_text(size=18),axis.text = element_text(size=16),
+        strip.text = element_text(size=18))+
+  theme_classic() </code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /> The dataset witnesses the increasing trends of obesity prevalence in England for males and female, and the growing gap between them.</p>
+</div>
+</div>
+<div id="save-the-obesity-trend-figure" class="section level2">
+<h2>save the obesity trend figure</h2>
+<pre class="r"><code>ggsave(&quot;pic/obesity trend by gender.jpg&quot;, width = 7, height = 4)</code></pre>
+</div>
+<div id="load-and-clean-shapefile-dataset" class="section level2">
+<h2>load and clean shapefile dataset</h2>
+<div id="load-shapefile" class="section level3">
+<h3>load shapefile</h3>
+<pre class="r"><code>la &lt;- st_read(&quot;datasets/gadm36_GBR_shp/gadm36_GBR_2.shp&quot;) %&gt;% 
+  st_transform(., 27700) %&gt;% 
+  clean_names()</code></pre>
+<pre><code>## Reading layer `gadm36_GBR_2&#39; from data source `/Users/huoanni/OneDrive - University College London/Module assessment/GEOG0114_CW1/assessment0114/datasets/gadm36_GBR_shp/gadm36_GBR_2.shp&#39; using driver `ESRI Shapefile&#39;
+## Simple feature collection with 183 features and 13 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XY
+## bbox:           xmin: -13.69139 ymin: 49.86542 xmax: 1.764168 ymax: 61.52708
+## geographic CRS: WGS 84</code></pre>
+</div>
+<div id="only-remain-the-data-for-england" class="section level3">
+<h3>only remain the data for England</h3>
+<pre class="r"><code>unique(la$name_1)</code></pre>
+<pre><code>## [1] &quot;England&quot;          &quot;Northern Ireland&quot; &quot;Scotland&quot;         &quot;Wales&quot;</code></pre>
+<pre class="r"><code>england_la &lt;- la[la$name_1==&quot;England&quot;,]%&gt;% 
+  select(., c(6, 7, 14)) </code></pre>
+</div>
+</div>
+<div id="merge-shapefile-and-.csv-file-of-england" class="section level2">
+<h2>merge shapefile and .csv file of England</h2>
+<pre class="r"><code>england_obesity &lt;- england_la %&gt;% 
+  left_join(., obesity,
+            by=c(&quot;name_2&quot;=&quot;X3&quot;)) %&gt;% 
+  select(., c(2, 3, 5, 6, 7, 9, 10, 11, 12)) %&gt;% 
+  clean_names()</code></pre>
+<pre class="r"><code>colnames(england_obesity)</code></pre>
+<pre><code>## [1] &quot;name_2&quot;                               
+## [2] &quot;region_and_la_of_residence&quot;           
+## [3] &quot;all_persons&quot;                          
+## [4] &quot;male&quot;                                 
+## [5] &quot;female&quot;                               
+## [6] &quot;all_persons_per_100_000_of_population&quot;
+## [7] &quot;male_per_100_000_of_population&quot;       
+## [8] &quot;female_per_100_000_of_population&quot;     
+## [9] &quot;geometry&quot;</code></pre>
+<pre class="r"><code># tmap to observe overall condition
+tm_shape(england_obesity) +
+  tm_polygons(&quot;all_persons_per_100_000_of_population&quot;,
+              palette=RColorBrewer::brewer.pal(8, &quot;YlOrRd&quot;),
+              midpoint=NA)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+</div>
+<div id="plot-the-obesity-density-distribution-in-england-by-gender" class="section level2">
+<h2>plot the obesity density distribution in England by gender</h2>
+<p>To avoid the influence of sparsely populated rural areas, the statistics of obesity density is calculated by dividing obese cases by population.</p>
+<div id="function-for-obesity-density-distribution-mapping" class="section level3">
+<h3>function for obesity density distribution mapping</h3>
+<pre class="r"><code>densityfun &lt;- function(datasets, colname, number, mode){
+  tmap_mode(mode)
+  breaks = c(-Inf, 500, 1000, 1500, 2000, 2500, 3000, 3500, +Inf) 
+  tm &lt;- tm_shape(datasets) +
+    tm_polygons(colname,
+                breaks=breaks,
+                palette=RColorBrewer::brewer.pal(8, &quot;YlOrRd&quot;),
+                midpoint=NA) +
+    tm_legend(show=FALSE)+
+    tm_layout(frame=FALSE)+
+    tm_credits(number, position=c(0,0.85), size=1)
+  
+  return(tm)
+}</code></pre>
+</div>
+<div id="function-for-legend-of-obesity-density-distribution-mapping" class="section level3">
+<h3>function for legend of obesity density distribution mapping</h3>
+<pre class="r"><code>legendfun &lt;- function(datasets, colname){
+  breaks = c(-Inf, 500, 1000, 1500, 2000, 2500, 3000, 3500, +Inf) 
+  legend &lt;- tm_shape(datasets) +
+    tm_polygons(colname,
+                breaks=breaks,
+                palette=RColorBrewer::brewer.pal(8, &quot;YlOrRd&quot;), 
+                title=&quot;Density of obese people in England \n(per 100,000 population)&quot;) +
+    tm_scale_bar(position=c(0.4, 0.01), text.size=0.6)+
+    tm_compass(north=0, position=c(0.95, 0.1))+
+   
+    tm_layout(title = &quot;Obese Population Density Comparison&quot;, 
+              legend.title.size=1,
+              legend.text.size = 0.6,
+              legend.only = TRUE, 
+              legend.position=c(0.1,0.1),asp=0.1)
+  
+  return(legend)
+}</code></pre>
+</div>
+<div id="tmap---obese-population-density-by-la-in-england" class="section level3">
+<h3>tmap - obese population density by LA in England</h3>
+<pre class="r"><code>tm1 &lt;- densityfun(england_obesity, &quot;male_per_100_000_of_population&quot;,&quot;a)&quot;, &quot;plot&quot;)</code></pre>
+<pre><code>## tmap mode set to plotting</code></pre>
+<pre class="r"><code>tm2 &lt;- densityfun(england_obesity, &quot;female_per_100_000_of_population&quot;,&quot;b)&quot;, &quot;plot&quot;)</code></pre>
+<pre><code>## tmap mode set to plotting</code></pre>
+<pre class="r"><code>legend &lt;- legendfun(england_obesity,&quot;male_per_100_000_of_population&quot;)
+
+
+t_density &lt;- tmap_arrange(tm1, tm2, legend, ncol=3)
+t_density</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-23-1.png" width="672" /> ### save obese population density mapping</p>
+<pre class="r"><code>tmap_save(t_density, &#39;pic/obese population density.png&#39;, width=7, height=3)</code></pre>
+<pre><code>## Map saved to /Users/huoanni/OneDrive - University College London/Module assessment/GEOG0114_CW1/assessment0114/pic/obese population density.png</code></pre>
+<pre><code>## Resolution: 2100 by 900 pixels</code></pre>
+<pre><code>## Size: 7 by 3 inches (300 dpi)</code></pre>
+</div>
+</div>
+<div id="spatial-autocorrelation" class="section level2">
+<h2>spatial autocorrelation</h2>
+<div id="global-morans-i-for-obese-male-and-female" class="section level3">
+<h3>Global Moran’s I for obese male and female</h3>
+<p>Global Moran’s I statistics, as a global spatial autocorrelation measurement for spatial terms, is used to examine whether obesity phenomena were dispersed, random or clustered.</p>
+<pre class="r"><code># check the current class
+class(england_obesity)</code></pre>
+<pre><code>## [1] &quot;sf&quot;         &quot;data.frame&quot;</code></pre>
+<pre class="r"><code># convert it to sp
+england_obesity_sp &lt;- as_Spatial(england_obesity, IDs=england_obesity$region_and_la_of_residence)</code></pre>
+<pre><code>## Warning in showSRID(uprojargs, format = &quot;PROJ&quot;, multiline = &quot;NO&quot;, prefer_proj
+## = prefer_proj): Discarded datum Unknown based on Airy 1830 ellipsoid in CRS
+## definition</code></pre>
+<pre><code>## Warning in showSRID(SRS_string, format = &quot;PROJ&quot;, multiline = &quot;NO&quot;, prefer_proj =
+## prefer_proj): Discarded datum OSGB 1936 in CRS definition</code></pre>
+<pre class="r"><code># check the class of the new object
+class(england_obesity_sp)</code></pre>
+<pre><code>## [1] &quot;SpatialPolygonsDataFrame&quot;
+## attr(,&quot;package&quot;)
+## [1] &quot;sp&quot;</code></pre>
+<pre class="r"><code># make the nb
+england_obesity_nb &lt;- poly2nb(england_obesity_sp, row.names=england_obesity_sp$region_and_la_of_residence)</code></pre>
+<pre class="r"><code># create the list weights object
+nb_weights_list &lt;- nb2listw(england_obesity_nb, style=&#39;B&#39;,
+                            zero.policy = TRUE)</code></pre>
+<pre class="r"><code>moran(england_obesity$male_per_100_000_of_population, 
+      nb_weights_list, 
+      n=length(nb_weights_list$neighbours), 
+      S0=Szero(nb_weights_list),
+      zero.policy = TRUE)</code></pre>
+<pre><code>## $I
+## [1] 0.1161155
+## 
+## $K
+## [1] 3.847276</code></pre>
+<pre class="r"><code>mc_model1 &lt;- moran.mc(england_obesity_sp$male_per_100_000_of_population, nb_weights_list, nsim=999,zero.policy = TRUE)
+mc_model1</code></pre>
+<pre><code>## 
+##  Monte-Carlo simulation of Moran I
+## 
+## data:  england_obesity_sp$male_per_100_000_of_population 
+## weights: nb_weights_list  
+## number of simulations + 1: 1000 
+## 
+## statistic = 0.11415, observed rank = 975, p-value = 0.025
+## alternative hypothesis: greater</code></pre>
+<pre class="r"><code>moran(england_obesity$female_per_100_000_of_population, 
+      nb_weights_list, 
+      n=length(nb_weights_list$neighbours), 
+      S0=Szero(nb_weights_list),
+      zero.policy = TRUE)</code></pre>
+<pre><code>## $I
+## [1] 0.2219553
+## 
+## $K
+## [1] 2.882281</code></pre>
+<pre class="r"><code>mc_model2 &lt;- moran.mc(england_obesity_sp$female_per_100_000_of_population, nb_weights_list, nsim=999,zero.policy = TRUE)
+mc_model2</code></pre>
+<pre><code>## 
+##  Monte-Carlo simulation of Moran I
+## 
+## data:  england_obesity_sp$female_per_100_000_of_population 
+## weights: nb_weights_list  
+## number of simulations + 1: 1000 
+## 
+## statistic = 0.21819, observed rank = 1000, p-value = 0.001
+## alternative hypothesis: greater</code></pre>
+</div>
+<div id="local-morans-i-for-obese-male-and-female" class="section level3">
+<h3>Local Moran’s I for obese male and female</h3>
+<p>Then, use the Local Moran’s I for obese male and female groups to identify specific spatial pattern for obesity at local authority level.</p>
+<pre class="r"><code># rescale that variable!
+england_obesity_sp$scale_male_per_100_000_of_population &lt;- scale(england_obesity_sp$male_per_100_000_of_population)
+# create a spatial lag variable and save it to a new column
+england_obesity_sp$lag_scale_male &lt;- lag.listw(nb_weights_list, england_obesity_sp$scale_male_per_100_000_of_population)</code></pre>
+<pre><code>## Warning in lag.listw(nb_weights_list,
+## england_obesity_sp$scale_male_per_100_000_of_population): NAs in lagged values</code></pre>
+<pre class="r"><code>england_obesity_moran_stats &lt;- st_as_sf(england_obesity_sp)
+local_moran &lt;- localmoran(england_obesity_sp$male_per_100_000_of_population, nb_weights_list)</code></pre>
+<pre><code>## Warning in lag.listw(listw, z, zero.policy = zero.policy, NAOK = NAOK): NAs in
+## lagged values</code></pre>
+<pre class="r"><code>sig_level &lt;- 0.1
+
+# version with significance value
+england_obesity_moran_stats$obese_male_aggregation_spot &lt;- ifelse(england_obesity_moran_stats$scale_male_per_100_000_of_population &gt; 0 &amp; 
+                                            england_obesity_moran_stats$lag_scale_male &gt; 0 &amp; 
+                                            local_moran[,5] &lt;= sig_level, 
+                                          &quot;high-high&quot;, 
+                                          ifelse(england_obesity_moran_stats$scale_male_per_100_000_of_population &lt;= 0 &amp; 
+                                                   england_obesity_moran_stats$lag_scale_male &lt;= 0 &amp; 
+                                                   local_moran[,5] &lt;= sig_level, 
+                                                 &quot;low-low&quot;, 
+                                                 ifelse(england_obesity_moran_stats$scale_male_per_100_000_of_population &gt; 0 &amp; 
+                                                          england_obesity_moran_stats$lag_scale_male &lt;= 0 &amp; 
+                                                          local_moran[,5] &lt;= sig_level, 
+                                                        &quot;high-low&quot;, 
+                                                        ifelse(england_obesity_moran_stats$scale_male_per_100_000_of_population &lt;= 0 &amp; 
+                                                                 england_obesity_moran_stats$lag_scale_male &gt; 0 &amp; 
+                                                                 local_moran[,5] &lt;= sig_level, 
+                                                               &quot;low-high&quot;,
+                                                               ifelse(local_moran[,5] &gt; sig_level, 
+                                                                      &quot;not-significant&quot;, 
+                                                                      &quot;not-significant&quot;)))))</code></pre>
+<pre class="r"><code># plot the results nnw with the satistical significance
+ggplot(england_obesity_moran_stats, 
+       aes(x = scale_male_per_100_000_of_population,
+           y = lag_scale_male, 
+           color = obese_male_aggregation_spot)) +
+  geom_vline(xintercept = 0) + # plot vertical line
+  geom_hline(yintercept = 0) + # plot horizontal line
+  xlab(&quot;Scaled Male Obesity (n)&quot;) +
+  ylab(&quot;Lagged Scaled Male Obesity (n)&quot;) +
+  labs(colour=&quot;obese_male_aggregation_spot&quot;) +
+  geom_point()</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<pre class="r"><code>tmap_mode(&quot;plot&quot;)</code></pre>
+<pre><code>## tmap mode set to plotting</code></pre>
+<pre class="r"><code>t1 &lt;- tm_shape(england_obesity_moran_stats) +
+  tm_polygons(&quot;obese_male_aggregation_spot&quot;,
+              palette=c(&quot;red&quot;, &quot;blue&quot;, &quot;white&quot;, &quot;grey&quot;))+
+  tm_legend(show=FALSE)+
+  tm_layout(frame=FALSE)+
+  tm_credits(&quot;a)&quot;, position=c(0,0.85), size=1)</code></pre>
+<pre class="r"><code># rescale that variable!
+england_obesity_sp$scale_female_per_100_000_of_population &lt;- scale(england_obesity_sp$female_per_100_000_of_population)
+# create a spatial lag variable and save it to a new column
+england_obesity_sp$lag_scale_female &lt;- lag.listw(nb_weights_list, england_obesity_sp$scale_female_per_100_000_of_population)</code></pre>
+<pre><code>## Warning in lag.listw(nb_weights_list,
+## england_obesity_sp$scale_female_per_100_000_of_population): NAs in lagged values</code></pre>
+<pre class="r"><code>england_obesity_moran_stats &lt;- st_as_sf(england_obesity_sp)
+local_moran &lt;- localmoran(england_obesity_sp$female_per_100_000_of_population, nb_weights_list)</code></pre>
+<pre><code>## Warning in lag.listw(listw, z, zero.policy = zero.policy, NAOK = NAOK): NAs in
+## lagged values</code></pre>
+<pre class="r"><code>sig_level &lt;- 0.1
+
+# version with significance value
+england_obesity_moran_stats$obese_female_aggregation_spot &lt;- ifelse(england_obesity_moran_stats$scale_female_per_100_000_of_population &gt; 0 &amp; 
+                                            england_obesity_moran_stats$lag_scale_female &gt; 0 &amp; 
+                                            local_moran[,5] &lt;= sig_level, 
+                                          &quot;high-high&quot;, 
+                                          ifelse(england_obesity_moran_stats$scale_female_per_100_000_of_population &lt;= 0 &amp; 
+                                                   england_obesity_moran_stats$lag_scale_female &lt;= 0 &amp; 
+                                                   local_moran[,5] &lt;= sig_level, 
+                                                 &quot;low-low&quot;, 
+                                                 ifelse(england_obesity_moran_stats$scale_female_per_100_000_of_population &gt; 0 &amp; 
+                                                          england_obesity_moran_stats$lag_scale_female &lt;= 0 &amp; 
+                                                          local_moran[,5] &lt;= sig_level, 
+                                                        &quot;high-low&quot;, 
+                                                        ifelse(england_obesity_moran_stats$scale_female_per_100_000_of_population &lt;= 0 &amp; 
+                                                                 england_obesity_moran_stats$lag_scale_female &gt; 0 &amp; 
+                                                                 local_moran[,5] &lt;= sig_level, 
+                                                               &quot;low-high&quot;,
+                                                               ifelse(local_moran[,5] &gt; sig_level, 
+                                                                      &quot;not-significant&quot;, 
+                                                                      &quot;not-significant&quot;)))))</code></pre>
+<pre class="r"><code># plot the results nnw with the satistical significance
+ggplot(england_obesity_moran_stats, 
+       aes(x = scale_female_per_100_000_of_population,
+           y = lag_scale_female, 
+           color = obese_female_aggregation_spot)) +
+  geom_vline(xintercept = 0) + # plot vertical line
+  geom_hline(yintercept = 0) + # plot horizontal line
+  xlab(&quot;Scaled Female Obesity (n)&quot;) +
+  ylab(&quot;Lagged Scaled Female Obesity (n)&quot;) +
+  labs(colour=&quot;obese_female_aggregation_spot&quot;) +
+  geom_point()</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<pre class="r"><code>tmap_mode(&quot;plot&quot;)</code></pre>
+<pre><code>## tmap mode set to plotting</code></pre>
+<pre class="r"><code>t2 &lt;- tm_shape(england_obesity_moran_stats) +
+  tm_polygons(&quot;obese_female_aggregation_spot&quot;,
+              palette=c(&quot;red&quot;, &quot;blue&quot;, &quot;white&quot;, &quot;grey&quot;))+
+  tm_legend(show=FALSE)+
+  tm_layout(frame=FALSE)+
+  tm_credits(&quot;b)&quot;, position=c(0,0.85), size=1)</code></pre>
+<pre class="r"><code>legend &lt;- tm_shape(england_obesity_moran_stats) +
+  tm_polygons(&quot;obese_female_aggregation_spot&quot;,
+              palette=c(&quot;red&quot;, &quot;blue&quot;, &quot;white&quot;, &quot;grey&quot;),
+              title=&quot;Obese people aggregation spot in England&quot;) +
+  tm_scale_bar(position=c(0.1,0.12), text.size=0.6)+
+  tm_compass(north=0, position=c(0.65,0.2))+
+  tm_layout(title = &quot;Obesity spatial autocorrelation&quot;, 
+            legend.title.size=1,
+            legend.text.size = 0.6,
+            legend.only = TRUE, 
+            legend.position=c(0.1,0.25),asp=0.1)</code></pre>
+</div>
+<div id="arrange-the-maps-and-save" class="section level3">
+<h3>arrange the maps and save</h3>
+<pre class="r"><code>tmap_mode(&quot;plot&quot;)</code></pre>
+<pre><code>## tmap mode set to plotting</code></pre>
+<pre class="r"><code>local_moran &lt;- tmap_arrange(t1, t2, legend, ncol=3)
+local_moran</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<pre class="r"><code>tmap_save(local_moran, &quot;pic/Local Moran&#39;s I, Obesity in England.png&quot;,width=7, height=4)</code></pre>
+<pre><code>## Map saved to /Users/huoanni/OneDrive - University College London/Module assessment/GEOG0114_CW1/assessment0114/pic/Local Moran&#39;s I, Obesity in England.png</code></pre>
+<pre><code>## Resolution: 2100 by 1200 pixels</code></pre>
+<pre><code>## Size: 7 by 4 inches (300 dpi)</code></pre>
+</div>
+</div>
+<div id="correlation-analysis" class="section level2">
+<h2>correlation analysis</h2>
+<div id="merge-datasets-used-for-correlation-analysis" class="section level3">
+<h3>merge datasets used for correlation analysis</h3>
+<pre class="r"><code>obesityfactor &lt;- england_obesity %&gt;% 
+  left_join(., eduinves,
+            by = c(&quot;region_and_la_of_residence&quot; = &quot;la_code&quot;)) %&gt;% 
+  left_join(., income_male,
+            by = c (&quot;region_and_la_of_residence&quot; = &quot;Code&quot;)) %&gt;% 
+  left_join(., income_female,
+            by = c (&quot;region_and_la_of_residence&quot; = &quot;Code&quot;)) %&gt;% 
+  left_join(., crime,
+            by = c (&quot;region_and_la_of_residence&quot; = &quot;lad17cd&quot;)) %&gt;% 
+  select(., c(2, 7, 8, 9, 10, 11, 13))</code></pre>
+<pre class="r"><code>colnames(obesityfactor) = c(&quot;code&quot;,&quot;male_obesity&quot;,&quot;female_obesity&quot;,&quot;education_invest&quot;,
+                &quot;male_income&quot;,&quot;female_income&quot;,&quot;crime&quot;, &quot;geometry&quot;)</code></pre>
+<pre class="r"><code>obesityfactor &lt;- obesityfactor[!is.na(obesityfactor$male_obesity)&amp;
+                                 !is.na(obesityfactor$female_obesity)&amp;
+                                 !is.na(obesityfactor$education_invest)&amp;
+                                 !is.na(obesityfactor$male_income)&amp;
+                                 !is.na(obesityfactor$female_income)&amp;
+                                 !is.na(obesityfactor$crime)&amp;
+                                 !is.na(obesityfactor$crime),]</code></pre>
+</div>
+<div id="correlation-analysis-1" class="section level3">
+<h3>correlation analysis</h3>
+<pre class="r"><code>colnames(obesityfactor)</code></pre>
+<pre><code>## [1] &quot;code&quot;             &quot;male_obesity&quot;     &quot;female_obesity&quot;   &quot;education_invest&quot;
+## [5] &quot;male_income&quot;      &quot;female_income&quot;    &quot;crime&quot;            &quot;geometry&quot;</code></pre>
+<p>During the process, outliers could be figured out and removed.</p>
+<pre class="r"><code>q1 &lt;- qplot(x = `education_invest`, 
+           y = `male_obesity`, 
+           data=obesityfactor,
+           xlim = c(550, 1150))
+qem &lt;- q1 + stat_smooth(method=&quot;lm&quot;, se=FALSE, size=1) </code></pre>
+<pre class="r"><code>q2 &lt;- qplot(x = `education_invest`, 
+           y = `female_obesity`, 
+           data=obesityfactor,
+           xlim = c(500, 1150))
+qef &lt;- q2 + stat_smooth(method=&quot;lm&quot;, se=FALSE, size=1) </code></pre>
+<pre class="r"><code>q3 &lt;- qplot(x = `male_income`, 
+           y = `male_obesity`, 
+           data=obesityfactor,
+           xlim = c(550, 750))
+qim &lt;- q3 + stat_smooth(method=&quot;lm&quot;, se=FALSE, size=1) </code></pre>
+<pre class="r"><code>q4 &lt;- qplot(x = `female_income`, 
+           y = `female_obesity`, 
+           data=obesityfactor,
+           xlim = c(350, 550))
+qif &lt;- q4 + stat_smooth(method=&quot;lm&quot;, se=FALSE, size=1) </code></pre>
+<pre class="r"><code>q5 &lt;- qplot(x = `crime`, 
+           y = `male_obesity`, 
+           data=obesityfactor,
+           xlim = c(0, 50000))
+qcm &lt;- q5 + stat_smooth(method=&quot;lm&quot;, se=FALSE, size=1) </code></pre>
+<pre class="r"><code>q6 &lt;- qplot(x = `crime`, 
+           y = `female_obesity`, 
+           data=obesityfactor,
+           xlim = c(0, 50000))
+qcf &lt;- q6 + stat_smooth(method=&quot;lm&quot;, se=FALSE, size=1) </code></pre>
+</div>
+<div id="comparison-of-influence-for-males-and-females" class="section level3">
+<h3>comparison of influence for males and females</h3>
+<pre class="r"><code>multiplot(qem, qef, cols = 2)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 10 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 10 rows containing missing values (geom_point).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 6 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_point).</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<pre class="r"><code>multiplot(qim, qif, cols = 2)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 21 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 21 rows containing missing values (geom_point).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 3 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+<pre class="r"><code>multiplot(qcm, qcf, cols = 2)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 7 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 7 rows containing missing values (geom_point).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 7 rows containing non-finite values (stat_smooth).
+
+## Warning: Removed 7 rows containing missing values (geom_point).</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+</div>
+<div id="statistical-results" class="section level3">
+<h3>statistical results</h3>
+<pre class="r"><code>type &lt;- obesityfactor %&gt;% 
+  st_drop_geometry() %&gt;% 
+  summarise_all(class) %&gt;% 
+  pivot_longer(everything(),
+               names_to=&quot;all_variables&quot;,
+               values_to=&quot;variable_class&quot;)
+type</code></pre>
+<pre><code>## # A tibble: 7 x 2
+##   all_variables    variable_class
+##   &lt;chr&gt;            &lt;chr&gt;         
+## 1 code             character     
+## 2 male_obesity     numeric       
+## 3 female_obesity   numeric       
+## 4 education_invest numeric       
+## 5 male_income      numeric       
+## 6 female_income    numeric       
+## 7 crime            numeric</code></pre>
+<pre class="r"><code>obesityfactorfilter &lt;- obesityfactor %&gt;% 
+  filter(education_invest&gt;=500&amp;
+           education_invest&lt;=1150&amp;
+           male_income&gt;=550&amp;
+           male_income&lt;=750&amp;
+           female_income&gt;=350&amp;
+           female_income&lt;=550&amp;
+           crime&lt;=50000)</code></pre>
+<pre class="r"><code>type &lt;- obesityfactorfilter %&gt;% 
+  st_drop_geometry() %&gt;% 
+  summarise_all(class) %&gt;% 
+  pivot_longer(everything(),
+               names_to=&quot;all_variables&quot;,
+               values_to=&quot;variable_class&quot;)
+type</code></pre>
+<pre><code>## # A tibble: 7 x 2
+##   all_variables    variable_class
+##   &lt;chr&gt;            &lt;chr&gt;         
+## 1 code             character     
+## 2 male_obesity     numeric       
+## 3 female_obesity   numeric       
+## 4 education_invest numeric       
+## 5 male_income      numeric       
+## 6 female_income    numeric       
+## 7 crime            numeric</code></pre>
+<pre class="r"><code>Correlation_male&lt;- obesityfactorfilter %&gt;%
+  st_drop_geometry() %&gt;% 
+  dplyr::select(c(2, 4, 5, 7))%&gt;%
+  correlate()</code></pre>
+<pre><code>## 
+## Correlation method: &#39;pearson&#39;
+## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<pre class="r"><code>Correlation_male</code></pre>
+<pre><code>## # A tibble: 4 x 5
+##   term             male_obesity education_invest male_income   crime
+##   &lt;chr&gt;                   &lt;dbl&gt;            &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;
+## 1 male_obesity          NA               -0.0788     -0.0305  0.245 
+## 2 education_invest      -0.0788          NA          -0.343  -0.0204
+## 3 male_income           -0.0305          -0.343      NA      -0.153 
+## 4 crime                  0.245           -0.0204     -0.153  NA</code></pre>
+<pre class="r"><code>Correlation_female&lt;- obesityfactorfilter %&gt;%
+  st_drop_geometry() %&gt;% 
+  dplyr::select(c(3, 4, 6, 7))%&gt;%
+  correlate()</code></pre>
+<pre><code>## 
+## Correlation method: &#39;pearson&#39;
+## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<pre class="r"><code>Correlation_female</code></pre>
+<pre><code>## # A tibble: 4 x 5
+##   term             female_obesity education_invest female_income    crime
+##   &lt;chr&gt;                     &lt;dbl&gt;            &lt;dbl&gt;         &lt;dbl&gt;    &lt;dbl&gt;
+## 1 female_obesity          NA               -0.0595      -0.154    0.368  
+## 2 education_invest        -0.0595          NA           -0.0296  -0.0204 
+## 3 female_income           -0.154           -0.0296      NA        0.00385
+## 4 crime                    0.368           -0.0204       0.00385 NA</code></pre>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

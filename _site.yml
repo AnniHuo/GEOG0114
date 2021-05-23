@@ -1,0 +1,9 @@
+name: "GEOG0114_obesity analysis"
+output_dir: "."
+navbar:
+  title: "analysis site"
+  left:
+    - text: "114 CW1 analysis"
+      href: index.html
+
+
